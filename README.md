@@ -35,8 +35,9 @@ This list focuses on **tools that agents call**, not the agents themselves. When
 ## Browser Automation
 
 - [agent-browser](https://github.com/vercel-labs/agent-browser) - Purpose-built browser automation CLI for AI agents. Uses accessibility-tree snapshots with stable `[ref=e1]` references instead of CSS selectors, reducing context usage by 90%. `JSON` `Agent-First`
-- [Playwright CLI](https://github.com/microsoft/playwright) - Cross-browser automation with `npx playwright` commands for codegen, screenshots, PDF generation, and testing. `--reporter=json` for structured test output. `JSON`
+- [Playwright](https://github.com/microsoft/playwright) - Cross-browser automation with `npx playwright` commands for codegen, screenshots, PDF generation, and testing. `--reporter=json` for structured test output. `JSON`
 - [shot-scraper](https://github.com/simonw/shot-scraper) - CLI for taking screenshots and scraping web pages. Run JavaScript in pages, extract text, generate PDFs. Built on Playwright. `JSON`
+- [Playwright CLI](https://github.com/microsoft/playwright-cli) - Agent-first browser automation CLI. Token-efficient commands (`goto`, `click`, `fill`, `screenshot`, `snapshot`) that avoid flooding LLM context. YAML snapshots instead of verbose accessibility trees. Tabs, cookies, network mocking, and tracing built in. `Agent-First`
 - [Firecrawl CLI](https://github.com/firecrawl/firecrawl) - Turns websites into LLM-ready markdown or structured data. Commands: `scrape`, `crawl`, `map`, `search`. Supports natural language extraction prompts. `JSON` `Agent-First`
 
 ## Code Search & Analysis
@@ -112,6 +113,8 @@ This list focuses on **tools that agents call**, not the agents themselves. When
 - [Pulumi](https://github.com/pulumi/pulumi) - IaC using real programming languages (TypeScript, Python, Go). `--json` output. Pulumi AI for natural language generation. `JSON`
 - [AWS CLI](https://github.com/aws/aws-cli) - Manage all AWS services. `--output json` (default). `--query` for JMESPath filtering. `--no-cli-pager` for non-interactive mode. `JSON`
 - [flyctl](https://github.com/superfly/flyctl) - Fly.io CLI. `--json` output. `fly deploy` for one-command deploys. Managed databases and autoscaling. `JSON`
+- [Tailscale CLI](https://github.com/tailscale/tailscale) - Secure mesh networking via WireGuard. `tailscale status --json` for network/peer info. Useful for agents that need to reach remote test machines, hardware rigs, or CI runners across a private network. `JSON`
+- [Sentry CLI](https://github.com/getsentry/sentry-cli) - Manage Sentry releases, upload source maps and debug symbols, send events, and monitor cron jobs. Written in Rust. Integrates error tracking into deploy pipelines.
 - [Railway CLI](https://github.com/railwayapp/cli) - Railway platform CLI. `railway up --detach` for non-blocking deploys. Database provisioning. Environment management.
 - [Vercel CLI](https://vercel.com/docs/cli) - Deploy and manage Vercel projects. Framework auto-detection. Structured JSON deploy output with preview URLs. `JSON`
 
