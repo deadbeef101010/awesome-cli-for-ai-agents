@@ -66,6 +66,8 @@ This list focuses on **tools that agents call**, not the agents themselves. When
 - [HTTPie](https://github.com/httpie/cli) - Human-friendly HTTP client with JSON as the default content type. `--print=b` for body-only output. Sessions, plugins, `--offline` for request preview. `JSON`
 - [xh](https://github.com/ducaale/xh) - HTTPie reimplemented in Rust for speed. Single static binary. HTTPie-compatible syntax. `JSON`
 - [curlie](https://github.com/rs/curlie) - curl frontend with HTTPie's UX. All curl options exposed with automatic JSON highlighting. `JSON`
+- [Google Workspace CLI](https://github.com/googleworkspace/cli) - Unified CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service — auto-picks up new API endpoints. Ships with 100+ agent skills. Written in Rust. `JSON` `Agent-First`
+- [Resend CLI](https://github.com/resend/resend-cli) - Official CLI for the Resend email service. Auto-detects TTY for human-friendly vs JSON output. `--json` flag, `--quiet` mode, `resend doctor` for environment diagnostics including AI agent detection. `JSON` `Agent-First`
 - [gh api](https://cli.github.com/manual/gh_api) - Make authenticated GitHub API calls (REST and GraphQL) directly. Returns raw JSON. Part of the `gh` CLI. `JSON`
 
 ## Git & Version Control
@@ -159,6 +161,7 @@ This list focuses on **tools that agents call**, not the agents themselves. When
 - [code2prompt](https://github.com/mufeedvh/code2prompt) - Generate LLM prompts from codebases with source tree, token counting, and Handlebars templates. Filter by include/exclude patterns. `Agent-First`
 - [files-to-prompt](https://github.com/simonw/files-to-prompt) - Concatenate files into a single prompt. Adds file paths and separators. Extension filters, `.gitignore` integration. Markdown and Claude XML output formats. `Agent-First`
 - [llm](https://github.com/simonw/llm) - Interact with any LLM (OpenAI, Anthropic, Google, local) from the CLI. Logs everything to SQLite. Plugins, templates, tool use. Agents can use this for sub-LLM calls. `JSON`
+- [mcp2cli](https://github.com/knowsuchagency/mcp2cli) - Turn any MCP server or OpenAPI spec into a CLI at runtime with zero codegen. `--list` and `--help` flags for tool discovery. Saves 96-99% of tokens vs native tool-schema injection. Supports OAuth and spec caching. `JSON` `Agent-First`
 - [ttok](https://github.com/simonw/ttok) - Count and truncate text by tokens. `cat file.txt | ttok` for count, `cat file.txt | ttok -t 100` for truncation. Useful for agents managing context windows.
 
 ## System Information & Benchmarking
